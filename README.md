@@ -35,6 +35,7 @@ TRENDORA provides a complete front-end shopping experience with user authenticat
 * Git & GitHub
 * GitHub Pages
 
+
 ## 📂 Project Structure
 
 ```text
@@ -51,7 +52,6 @@ TRENDORA/
 │   ├── kids.jpg
 │   ├── men.jpg
 │   ├── women.jpg
-│   │
 │   └── products/
 │       └── product images
 │
@@ -69,26 +69,21 @@ TRENDORA/
 ## 📸 Project Screenshots
 
 ### 🏠 Homepage
-
 ![TRENDORA Homepage](screenshots/home.png)
 
 ### 🛍️ Shopping Pages
+![Shopping Page 1](<screenshots/shop page 1.png>)
 
-![TRENDORA Shopping Page 1](screenshots/shop%20page%201.png)
-
-![TRENDORA Shopping Page 2](screenshots/shop%20page%202.png)
+![Shopping Page 2](<screenshots/shop page 2.png>)
 
 ### 🔐 Sign Up Page
-
-![TRENDORA Sign Up Page](screenshots/signup%20page.png)
+![Sign Up Page](<screenshots/signup page.png>)
 
 ### 🛒 Shopping Cart
-
-![TRENDORA Shopping Cart](screenshots/cart.png)
+![Shopping Cart](screenshots/cart.png)
 
 ### 📦 Checkout Page
-
-![TRENDORA Checkout Page](screenshots/check-out%20page.png)
+![Checkout Page](<screenshots/check-out page.png>)
 
 ## 💻 Run Locally
 
