@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trendora – Where Your Style Begins</title>
+  <meta name="description" content="Trendora – Fashion & Lifestyle Store. Discover the latest trends for Men, Women & Kids." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= 1. LANDING PAGE ================= -->
+  <section id="landingPage" class="view landing active">
+    <div class="landing-bg"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <nav class="landing-nav">
+      <div class="logo">TREN<span>DORA</span></div>
+      <ul>
+        <li><a href="#" data-go="auth">Collections</a></li>
+        <li><a href="#" data-go="auth">New In</a></li>
+        <li><a href="#" data-go="auth">Sign In</a></li>
+      </ul>
+    </nav>
+    <div class="landing-content">
+      <p class="eyebrow fade-up d1">✦ Fashion &amp; Lifestyle Store</p>
+      <h1 class="landing-title fade-up d2">TRENDORA</h1>
+      <h2 class="landing-tagline fade-up d3">Where Your Style Begins</h2>
+      <p class="landing-text fade-up d4">Discover the latest trends for Men, Women &amp; Kids.</p>
+      <div class="landing-buttons fade-up d5">
+        <button class="btn btn-primary" data-go="auth">EXPLORE COLLECTION</button>
+        <button class="btn btn-outline" data-go="auth">SHOP NOW</button>
+      </div>
+      <div class="landing-stats fade-up d5">
+        <div><strong>10K+</strong><span>Styles</span></div>
+        <div><strong>500+</strong><span>Brands</span></div>
+        <div><strong>1M+</strong><span>Happy Shoppers</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span></span><p>Scroll</p></div>
+  </section>
+
+  <!-- ================= 2. AUTH PAGE ================= -->
+  <section id="authPage" class="view auth">
+    <div class="auth-side">
+      <div class="logo">TREN<span>DORA</span></div>
+      <h2>New season.<br />New you.</h2>
+      <p>Join Trendora and get <b>20% off</b> your first order.</p>
+    </div>
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="signInTab">Sign In</button>
+        <button class="auth-tab" id="signUpTab">Sign Up</button>
+        <span class="tab-indicator" id="tabIndicator"></span>
+      </div>
+
+      <!-- Sign In Form -->
+      <form id="signInForm" class="auth-form active" novalidate>
+        <h3>Welcome back</h3>
+        <div class="field"><label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com" /><small></small></div>
+        <div class="field"><label>Password</label>
+          <div class="pass-wrap"><input type="password" id="loginPassword" placeholder="••••••••" /><button type="button" class="toggle-pass">Show</button></div><small></small></div>
+        <div class="form-row">
+          <label class="check"><input type="checkbox" id="rememberMe" /> Remember me</label>
+          <a href="#" id="forgotLink">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        <button type="button" class="btn-link" data-go="landing">← Back to home</button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form id="signUpForm" class="auth-form" novalidate>
+        <h3>Create your account</h3>
+        <div class="field"><label>Full Name</label><input type="text" id="signupName" placeholder="Your name" /><small></small></div>
+        <div class="field"><label>Email</label><input type="email" id="signupEmail" placeholder="you@example.com" /><small></small></div>
+        <div class="field"><label>Phone Number</label><input type="tel" id="signupPhone" placeholder="10-digit mobile" /><small></small></div>
+        <div class="field"><label>Password</label>
+          <div class="pass-wrap"><input type="password" id="signupPassword" placeholder="Min 8 characters" /><button type="button" class="toggle-pass">Show</button></div><small></small></div>
+        <div class="field"><label>Confirm Password</label><input type="password" id="signupConfirm" placeholder="Re-enter password" /><small></small></div>
+        <div class="field"><label class="check"><input type="checkbox" id="signupTerms" /> I agree to the Terms &amp; Conditions</label><small></small></div>
+        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= 3. MAIN STORE ================= -->
+  <section id="storePage" class="view store">
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="logo" data-scroll="top">TREN<span>DORA</span></div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#" data-scroll="top">Home</a>
+        <a href="#" data-filter="Men">Men</a>
+        <a href="#" data-filter="Women">Women</a>
+        <a href="#" data-filter="Kids">Kids</a>
+        <a href="#" data-scroll="newArrivals">New Arrivals</a>
+        <a href="#" data-scroll="offers">Offers</a>
+      </nav>
+      <div class="header-icons">
+        <div class="search-box" id="searchBox">
+          <input type="text" id="searchInput" placeholder="Search products..." />
+          <button class="icon-btn" id="searchBtn" title="Search">⌕</button>
+        </div>
+        <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡<span class="badge" id="wishCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" title="Cart">🛍<span class="badge" id="cartCount">0</span></button>
+        <div class="profile">
+          <button class="icon-btn" id="profileBtn" title="Profile">👤</button>
+          <div class="profile-menu" id="profileMenu">
+            <p>Hello, <b id="userName">Guest</b></p>
+            <button id="logoutBtn">Logout</button>
+          </div>
+        </div>
+        <button class="icon-btn hamburger" id="hamburger">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow fade-up d1">Autumn / Winter 2026</p>
+        <h1 class="fade-up d2">DEFINE<br />YOUR <em>STYLE</em></h1>
+        <p class="fade-up d3">Discover fashion that speaks for you.</p>
+        <div class="fade-up d4">
+          <button class="btn btn-primary" data-filter="Men">Shop Men</button>
+          <button class="btn btn-outline" data-filter="Women">Shop Women</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature strip -->
+    <div class="features">
+      <div>🚚 Free delivery over ₹999</div>
+      <div>↺ 10-Days Easy Returns</div>
+      <div>🔒 100% secure payments</div>
+      <div>★ Top rated quality</div>
+    </div>
+
+    <!-- Categories -->
+    <section class="section reveal" id="categories">
+      <div class="section-head"><p class="eyebrow">Shop by</p><h2>Categories</h2></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <!-- Offers -->
+    <section class="section reveal" id="offers">
+      <div class="section-head"><p class="eyebrow">Limited time</p><h2>Hot Offers</h2></div>
+      <div class="offer-grid">
+        <div class="offer-card offer-main">
+          <p class="eyebrow">Mega Sale</p>
+          <h3>FLAT 40% OFF</h3>
+          <p>On all women's ethnic wear. Ends in:</p>
+          <div class="countdown" id="countdown">
+            <div><b id="cdHours">00</b><span>Hrs</span></div>
+            <div><b id="cdMins">00</b><span>Min</span></div>
+            <div><b id="cdSecs">00</b><span>Sec</span></div>
+          </div>
+          <button class="btn btn-dark" data-filter="Women">Grab the deal</button>
+        </div>
+        <div class="offer-card offer-alt"><h3>NEW SEASON SALE</h3><p>Fresh drops, up to 30% off.</p><button class="btn btn-outline" data-scroll="newArrivals">Explore</button></div>
+        <div class="offer-card offer-alt2"><h3>BUY MORE, SAVE MORE</h3><p>Extra 10% off on orders above ₹2999.</p><button class="btn btn-outline" data-scroll="shop">Shop now</button></div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section reveal" id="newArrivals">
+      <div class="section-head"><p class="eyebrow">Just landed</p><h2>New Arrivals</h2></div>
+      <div class="product-grid" id="newGrid"></div>
+    </section>
+
+    <!-- Shop with filters -->
+    <section class="section" id="shop">
+      <div class="section-head"><p class="eyebrow">Our collection</p><h2 id="shopTitle">All Products</h2></div>
+      <div class="shop-layout">
+        <aside class="filters" id="filters">
+          <h4>Category</h4>
+          <select id="filterCategory">
+            <option value="All">All</option><option>Men</option><option>Women</option><option>Kids</option><option>Footwear</option><option>Accessories</option>
+          </select>
+          <h4>Max Price: ₹<span id="priceLabel">5000</span></h4>
+          <input type="range" id="filterPrice" min="200" max="5000" step="100" value="5000" />
+          <h4>Minimum Rating</h4>
+          <select id="filterRating">
+            <option value="0">Any</option><option value="4">4★ &amp; above</option><option value="4.5">4.5★ &amp; above</option>
+          </select>
+          <h4>Size</h4>
+          <div class="size-filter" id="filterSize">
+            <button data-size="All" class="active">All</button><button data-size="S">S</button><button data-size="M">M</button><button data-size="L">L</button><button data-size="XL">XL</button>
+          </div>
+          <button class="btn btn-outline btn-block" id="resetFilters">Reset Filters</button>
+        </aside>
+        <div>
+          <div class="shop-toolbar">
+            <span id="resultCount">0 products</span>
+            <select id="sortSelect">
+              <option value="recommended">Recommended</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="rating">Rating</option>
+              <option value="new">New Arrivals</option>
+            </select>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <p class="no-results" id="noResults">😕 No products found</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">TREN<span>DORA</span></div>
+          <p>Where Your Style Begins</p>
+          <form class="newsletter" id="newsletterForm"><input type="email" id="newsEmail" placeholder="Your email for updates" /><button class="btn btn-primary">Subscribe</button></form>
+        </div>
+        <div><h4>Quick Links</h4>
+          <a href="#" data-scroll="top">Home</a><a href="#" data-filter="Men">Men</a><a href="#" data-filter="Women">Women</a>
+          <a href="#" data-filter="Kids">Kids</a><a href="#" data-filter="footwear">Footwear</a><a href="#" data-filter="accessories">Accessories</a></div>
+        <div><h4>Customer Support</h4><a href="#">Contact Us</a><a href="#">FAQs</a><a href="#">Shipping</a><a href="#">Returns</a></div>
+        <div><h4>Connect With Me</h4>
+          <div class="socials"><a href="#" data-social="gmail" target="_blank" rel="noopener noreferrer" aria-label="Gmail"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5Z"/></svg><span>Gmail</span></a><a href="#" data-social="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span>GitHub</span></a><a href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg><span>LinkedIn</span></a><a href="#" data-social="twitter" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/></svg><span>X / Twitter</span></a><a href="#" data-social="youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg><span>YouTube</span></a><a href="#" data-social="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.5a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36A9.43 9.43 0 1 1 12.05 21.5Zm8.02-17.47A11.3 11.3 0 0 0 2.25 17.6L.65 23.5l6.04-1.58a11.3 11.3 0 0 0 5.36 1.37A11.3 11.3 0 0 0 20.07 4.03Z"/></svg><span>WhatsApp</span></a></div></div>
+      </div>
+      <p class="copyright">©2025 Trendora, All Rights Reserved to Alok Gupta</p>
+    </footer>
+  </section>
+
+  <!-- ================= 4. CHECKOUT PAGE ================= -->
+  <section id="checkoutPage" class="view checkout">
+    <header class="header solid">
+      <div class="logo">TREN<span>DORA</span></div>
+      <button class="btn btn-outline" id="backToShop">← Continue Shopping</button>
+    </header>
+    <div class="checkout-wrap">
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <h2>Checkout</h2>
+        <h4>Customer Details</h4>
+        <div class="grid-2">
+          <div class="field"><label>Name</label><input id="coName" /><small></small></div>
+          <div class="field"><label>Email</label><input id="coEmail" type="email" /><small></small></div>
+          <div class="field"><label>Phone</label><input id="coPhone" type="tel" /><small></small></div>
+        </div>
+        <h4>Delivery Address</h4>
+        <div class="grid-2">
+          <div class="field"><label>House / Flat</label><input id="coHouse" /><small></small></div>
+          <div class="field"><label>Street</label><input id="coStreet" /><small></small></div>
+          <div class="field"><label>City</label><input id="coCity" /><small></small></div>
+          <div class="field"><label>State</label><input id="coState" /><small></small></div>
+          <div class="field"><label>Pincode</label><input id="coPin" /><small></small></div>
+        </div>
+        <h4>Payment Method</h4>
+        <div class="payment-options">
+          <label><input type="radio" name="pay" value="Cash on Delivery" checked /> Cash on Delivery</label>
+          <label><input type="radio" name="pay" value="UPI" /> UPI</label>
+          <label><input type="radio" name="pay" value="Card" /> Card</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+      </form>
+      <aside class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="summaryItems"></div>
+        <div id="summaryTotals"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= 5. ORDER SUCCESS ================= -->
+  <section id="successPage" class="view success">
+    <div class="success-card">
+      <div class="check-circle">✓</div>
+      <h2>Order Placed Successfully!</h2>
+      <p>Thank you for shopping with Trendora.</p>
+      <p class="order-id">Order ID: <b id="orderId"></b></p>
+      <button class="btn btn-primary" id="successHome">Continue Shopping</button>
+    </div>
+  </section>
+
+  <!-- ================= CART SIDEBAR ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><h3 id="drawerTitle">Your Cart</h3><button class="icon-btn" id="closeCart">✕</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- ================= PRODUCT MODAL ================= -->
+  <div class="modal" id="productModal">
+    <div class="modal-box" id="modalBox"></div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
